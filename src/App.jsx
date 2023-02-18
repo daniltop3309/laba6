@@ -60,7 +60,7 @@ function App() {
           path="/cart"
           element={<Cart cart={cart} setCart={setCart} register={register} order={order} setOrder={setOrder} />}
         />
-        <Route exact path="/order" element={<Order />} />
+        <Route exact path="/order" element={<Order order={order} />} />
       </Routes>
     </BrowserRouter>
   );
