@@ -3,7 +3,7 @@ import React from "react";
 function Cart({ cart, setCart, register, order, setOrder }) {
   function addToOrder() {
     setOrder(cart);
-    
+    setCart([]);
   }
   return (
     <div>
@@ -15,7 +15,7 @@ function Cart({ cart, setCart, register, order, setOrder }) {
               <p>{}</p>
             </div>
           ))}
-          <button onClick={() => addToOrder()}></button>
+          {cart.length !== 0 ? <button onClick={() => addToOrder()}>Сделать заказ</button> : ''}
         </div>
       ) : (
         "no access"

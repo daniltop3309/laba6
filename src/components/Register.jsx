@@ -34,7 +34,7 @@ function Register({ account, setAccount, setRegister }) {
             id="name"
             value={name}
             onChange={(event) => setName(event.target.value)}/>
-          <label>
+          <label style={{ color: "red" }}>
             {colorName === "red" ? "Большe 3 символов" : ""}
           </label>
         </div>
@@ -47,7 +47,7 @@ function Register({ account, setAccount, setRegister }) {
             id="password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}/>
-          <label>
+          <label style={{ color: "red" }}>
             {colorRegister === "red" ? "Большe 8 символов" : ""}
           </label>
         </div>

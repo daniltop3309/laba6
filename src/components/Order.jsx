@@ -1,8 +1,15 @@
 import React from 'react'
 
-function Order() {
+function Order({ order }) {
+
   return (
-    <div>Order</div>
+    <div>
+      {order.map((item, index) => (
+        <div key={index}>
+          <p>{item.name}</p>
+        </div>
+      ))}
+    </div>
   )
 }
 
